@@ -7,7 +7,9 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  name: ubuntu
+  demands:
+  - agent.name -equals ubuntu
 
 steps:
 - task: NodeTool@0
